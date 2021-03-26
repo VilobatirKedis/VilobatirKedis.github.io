@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(15, 15, 15);
+    font-family: "Public Sans", sans-serif;
+}
+
+.selection {
+    width: 15%;
+    margin-left: 4%;
+    margin-top: 30%;
+    font-weight: 750;
+    font-size: 55px; 
+
+    color: white;
+}
+
+.selection ul {
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.selection ul li {
+    padding: 5%;
+}
+
+.selection ul li:hover {
+    color: rgb(15, 15, 15);
+    animation: animate 0.5s ease-in;
+}
+
+@keyframes animate {
+    from {
+    }
+
+    to {
+        background-color: white;
+    }
+}
