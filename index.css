@@ -6,14 +6,48 @@
 }
 
 body {
-    background-color: rgb(15, 15, 15);
+    background-color: rgb(8, 8, 8);
     font-family: "Public Sans", sans-serif;
 }
 
+
+/*----------------LOADER--------------------*/
+.loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(3, 3, 3);;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader img {
+    width: 7%;
+    height: 14%;
+}
+
+/*----------------LOADER--------------------*/
+
+/*----------------HEADER--------------------*/
+img {
+    width: 150px;
+    height: 150px;
+
+    margin-left: 5%;
+    margin-top: 3%;
+}
+/*----------------HEADER--------------------*/
+
+/*----------------SELECTION MENU--------------------*/
 .selection {
-    width: 15%;
-    margin-left: 4%;
-    margin-top: 30%;
+    width: 20%;
+    margin-left: 6.5%;
+    margin-top: 20%;
     font-weight: 750;
     font-size: 55px; 
 
@@ -44,3 +78,5 @@ body {
         background-color: white;
     }
 }
+
+/*----------------SELECTION MENU--------------------*/
