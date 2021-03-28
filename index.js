@@ -4,8 +4,8 @@ $(document).ready(function() {
       opacity: 0
     }, 300, function() {
       $(".loader").remove();
-      
+      $("#handler").addClass("selection");
     });
 
-  }, 1700);
+  }, 1800);
 })
