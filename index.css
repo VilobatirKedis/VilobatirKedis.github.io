@@ -47,9 +47,9 @@ img {
 /*----------------SELECTION MENU--------------------*/
 .selection {
     width: 20%;
-    margin-left: 7%;
+    margin-left: 8%;
     margin-top: 20%;
-    font-weight: 350;
+    font-weight: 400;
     font-size: 55px; 
 
     color: white;
@@ -62,9 +62,30 @@ img {
     width: fit-content;
 }
 
-.selection div p {
+.selection div a {
     opacity: 0;
     animation: fade 0.01s ease-out 1.1s forwards;
+
+    text-decoration: none;
+    position: relative;
+}
+
+.selection div a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all .25s cubic-bezier(1,.25,0,.75) 0s;
+}
+
+.selection div a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
 }
 
 .selection div::after {
@@ -80,28 +101,6 @@ img {
     animation: swipe 1.5s ease-out 0.3s forwards;
 }
 
-.underline {
-    position: relative;
-    display: inline-block;
-}
-
-.underline::after {
-    content: "";
-    position: absolute;
-}
-
-.box .underline::after {
-    top: 65%;
-    height: 2px;
-    width: 0%;
-    left: 5%;
-    transition: 0.5s ease all .3s;
-}
-
-.box .underline::after {
-    width: 90%;
-    transition: 0.3s ease all;
-}
 
 @keyframes fade {
     from { opacity: 0; }
