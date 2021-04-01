@@ -139,13 +139,54 @@ img {
 /*----------------SELECTION MENU--------------------*/
 
 /*----------------TEXT-SLIDE-----------------------*/
-#textslide {
+.textslide {
+    position: relative;
+    overflow: hidden;
+
     float: left;
-    margin-top: 2%;
+    margin-top: 2.5%;
     height: 90vh;
     border-left: 0.5px solid white;
+    font-size: 260px;
 
     color: white;
-    font-size: 261px;
+}
+
+.textslide div {
+    margin-top: 5%;
+    width: 100%;
+}
+
+.textslide div span {
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+}
+
+.textslide div:nth-child(1) {
+    animation: rightoleft 8s linear infinite;
+}
+
+.textslide div:nth-child(2) {
+    animation: leftoright 8s linear infinite;
+}
+
+@keyframes rightoleft {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes leftoright {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 /*----------------TEXT-SLIDE-----------------------*/
