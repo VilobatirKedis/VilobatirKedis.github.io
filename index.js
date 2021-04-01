@@ -1,4 +1,4 @@
-/*$(document).ready(function() {
+$(document).ready(function() {
   setTimeout(function() {
     $(".loader").animate({
       opacity: 0
@@ -9,4 +9,4 @@
     });
 
   }, 1800);
-})*/
+})
