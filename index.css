@@ -1,4 +1,3 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -10,29 +9,6 @@ body {
     background-color: rgb(8, 8, 8);
     font-family: 'Fira Code', monospace;
 }
-
-
-/*----------------LOADER--------------------*/
-.loader {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: rgb(3, 3, 3);
-
-    top: 0;
-    left: 0;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.loader img {
-    width: 7%;
-    height: 14%;
-}
-
-/*----------------LOADER--------------------*/
 
 /*----------------HEADER--------------------*/
 img {
@@ -60,8 +36,6 @@ img {
 
     font-weight: 400;
     font-size: 55px; 
-
-    color: white;
 }
 
 .selection div {
@@ -75,6 +49,7 @@ img {
     opacity: 0;
     animation: fade 0.01s ease-out 1.1s forwards;
     cursor: pointer;
+    color: white;
 
     text-decoration: none;
     position: relative;
@@ -144,12 +119,15 @@ img {
     overflow: hidden;
 
     float: left;
+    width: 74%;
     margin-top: 2.5%;
     height: 90vh;
     border-left: 0.5px solid white;
-    font-size: 260px;
+    font-size: 26vh;
 
     color: white;
+
+    animation: viewport 2s ease-out;
 }
 
 .textslide div {
@@ -163,11 +141,11 @@ img {
 }
 
 .textslide div:nth-child(1) {
-    animation: rightoleft 8s linear infinite;
+    animation: rightoleft 6s linear infinite;
 }
 
 .textslide div:nth-child(2) {
-    animation: leftoright 8s linear infinite;
+    animation: leftoright 6s linear infinite;
 }
 
 @keyframes rightoleft {
@@ -189,4 +167,188 @@ img {
         transform: translateX(100%);
     }
 }
+
+@keyframes viewport {
+    0% {
+        height: 0vh;
+    }
+
+    100% {
+        height: 90vh;
+    }
+}
 /*----------------TEXT-SLIDE-----------------------*/
+
+/*----------------TRANSITION-----------------------*/
+.transition-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+
+    opacity: 0;
+    background-color: white;
+    pointer-events: none;
+
+    transition: 0.5s ease-out;
+}
+
+.transition-1.is-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.transition-2 {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    bottom: 0;
+    z-index: 101;
+    background-color: white;
+
+    transition: 0.5s ease-out;
+}
+
+.transition-2.is-active {
+    left: 0px;
+}
+/*----------------TRANSITION-----------------------*/
+
+/*----------------TOP-MENU-------------------------*/
+#link {
+    margin-top: -1.5%;
+}
+
+.topul {
+    list-style-type: none;
+    overflow: hidden;
+
+    margin-top: 4%;
+    margin-left: 75%;
+}
+
+.topul li {
+    float: left;
+}
+
+.topul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 24px;
+    text-decoration: none;
+    font-size: 20px;
+}
+/*----------------TOP-MENU-------------------------*/
+
+/*------------------TEXT---------------------------*/
+#wrapper {
+    display: flex;
+    margin-top: 8%;
+    margin-left: 10%;
+}
+
+.wrapper2 {
+    display: flex;
+    margin-top: 0.5%;
+    margin-left: 10%;
+}
+
+.swipe {
+    display: block;
+    position: relative;
+    width: fit-content;
+}
+
+.swipe::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 10%;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    animation: swipe 1.5s ease-out 1s forwards;
+}
+
+.swipe h1{
+    display: block;
+    color: white;
+    font-size: 72px;
+    font-weight: 500;
+    opacity: 0;
+    animation: fade 0.01s ease-out 1.75s forwards;
+}
+
+#parag{
+    display: block;
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+    animation: fade 0.01s ease-out 2.75s forwards;
+}
+
+#parag2{
+    display: block;
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+    animation: fade 0.01s ease-out 3.25s forwards;
+}
+
+#parag3{
+    display: block;
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+    animation: fade 0.01s ease-out 3.75s forwards;
+}
+
+.swipe--delay::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 10%;
+    width: 0%;
+    height: 100%;
+    background-color: #DD8680;
+    animation: swipe 2.5s ease-out 1s forwards;
+    animation-delay: 1.5s;
+}
+
+.swipe--delay2::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 10%;
+    width: 0%;
+    height: 100%;
+    background-color: #DD8680;
+    animation: swipe 2.5s ease-out 1s forwards;
+    animation-delay: 2s;
+}
+
+.swipe--delay3::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 10%;
+    width: 0%;
+    height: 100%;
+    background-color: #DD8680;
+    animation: swipe 2.5s ease-out 1s forwards;
+    animation-delay: 2.5s;
+}
+
+/*------------------TEXT---------------------------*/

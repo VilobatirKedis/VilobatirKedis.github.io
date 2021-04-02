@@ -1,12 +1,20 @@
 $(document).ready(function() {
   setTimeout(function() {
-    $(".loader").animate({
-      opacity: 0
-    }, 300, function() {
-      $(".loader").remove();
-      $("#handler").addClass("selection");
-      $("#handler2").addClass("textslide");
-    });
+    document.querySelector(".transition").classList.remove("is-active");
+    $("#handler").addClass("selection");
+    $("#handler2").addClass("textslide");
+  }, 500);
 
-  }, 1800);
-})
+  const anchors = $("a");
+
+  for(let i = 0; i < anchors.length; i++) {
+    anchors[i].addEventListener("click", function(event) {
+      event.preventDefault();
+      
+      document.querySelector(".transition").classList.add("is-active");
+      setTimeout(function() {
+        window.location.href = event.target.href;
+      }, 500);
+    });
+  }
+});
