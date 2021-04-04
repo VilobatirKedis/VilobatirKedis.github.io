@@ -437,8 +437,9 @@ img {
 .projects p {
     font-size: 70px;
 
+    mix-blend-mode: difference;
     color: white;
     font-weight: 800;
-    transform: translate(-47%, 160%);
+    transform: translate(-40%, 160%);
 }
 /*------------------SLIDER---------------------------*/
