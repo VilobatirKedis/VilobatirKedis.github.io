@@ -11,9 +11,10 @@ $(document).ready(function() {
     anchors[i].addEventListener("click", function(event) {
       event.preventDefault();
       
+      const href = event.currentTarget.href;
       document.querySelector(".transition").classList.add("is-active");
       setTimeout(function() {
-        window.location.href = event.target.href;
+        window.location.href = href;
       }, 500);
     });
   }
