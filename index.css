@@ -329,7 +329,8 @@ img {
     right: 10%;
     width: 0%;
     height: 100%;
-    background-color: #DD8680;
+    background: -webkit-linear-gradient(to right, #000428, #004e92);
+    background: linear-gradient(to right, #000428, #004e92);
     animation: swipe 2.5s ease-out 1s forwards;
     animation-delay: 1.5s;
 }
@@ -343,7 +344,8 @@ img {
     right: 10%;
     width: 0%;
     height: 100%;
-    background-color: #DD8680;
+    background: -webkit-linear-gradient(to right, #000428, #004e92);
+    background: linear-gradient(to right, #000428, #004e92);
     animation: swipe 2.5s ease-out 1s forwards;
     animation-delay: 2s;
 }
@@ -357,7 +359,8 @@ img {
     right: 10%;
     width: 0%;
     height: 100%;
-    background-color: #DD8680;
+    background: -webkit-linear-gradient(to right, #000428, #004e92);
+    background: linear-gradient(to right, #000428, #004e92);
     animation: swipe 2.5s ease-out 1s forwards;
     animation-delay: 2.5s;
 }
@@ -371,7 +374,8 @@ img {
     right: 10%;
     width: 0%;
     height: 100%;
-    background-color: #DD8680;
+    background: -webkit-linear-gradient(to right, #000428, #004e92);
+    background: linear-gradient(to right, #000428, #004e92);
     animation: swipe 2.5s ease-out 1s forwards;
     animation-delay: 3s;
 }
