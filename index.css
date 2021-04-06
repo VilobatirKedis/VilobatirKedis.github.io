@@ -586,4 +586,16 @@ img {
         animation: fade 0.01s ease-out 4.25s forwards;
     }
 }
+
+@media screen and (min-device-height: 600px) and (max-device-height: 800px) {
+    .selection {
+        float: left;
+        width: 20%;
+        margin-top: 20%;
+        margin-left: -7%;
+    
+        font-weight: 400;
+        font-size: 35px; 
+    }
+}
 /*------------------MEDIA QUERIES---------------------*/
