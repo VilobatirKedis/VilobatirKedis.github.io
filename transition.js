@@ -17,7 +17,7 @@ $(document).ready(function() {
         });
     }
 
-    const slider = document.querySelector("#handler");
+    /*const slider = document.querySelector("#handler");
     const preventClick = (e) => {
       e.preventDefault();
       e.stopImmediatePropagation();
@@ -67,5 +67,5 @@ $(document).ready(function() {
         const walk = (x - startX) * 2;
         slider.scrollLeft = scrollLeft - walk;
       });
-    }
+    }*/
 });
