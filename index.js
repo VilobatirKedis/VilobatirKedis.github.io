@@ -18,4 +18,22 @@ $(document).ready(function() {
       }, 500);
     });
   }
+
+  let cursorFollow = $(".cursor");
+  let mouseCursor = $(".fastCursor");
+
+  $("body").mousemove(function(event) {
+    console.log(event.pageX);
+    console.log(event.pageY);
+
+    cursorFollow.css({
+      left: event.clientX,
+      top: event.clientY
+    });
+
+    mouseCursor.css({
+      left: event.clientX + 1.5,
+      top: event.clientY
+    });
+  });
 });

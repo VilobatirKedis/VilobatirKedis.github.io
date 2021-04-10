@@ -3,12 +3,55 @@
 * {
     margin: 0;
     padding: 0;
+    cursor: none;
+}
+
+html {
+    overflow: hidden;
 }
 
 body {
     background-color: rgb(8, 8, 8);
     font-family: 'Fira Code', monospace;
+    overflow: hidden;
+
+    margin: 0;
+    box-sizing: border-box;
 }
+
+html, body {
+    height: 100%;
+}
+
+/*----------------CURSOR--------------------*/
+.cursor {
+    position: absolute;
+
+    height: 40px;
+    width: 40px;
+
+    border: 1px solid white;
+    border-radius: 100%;
+
+    transform: translate(-36%, -42%);
+
+    transition: 0.2s ease-out;
+
+    mix-blend-mode: difference;
+}
+
+.fastCursor {
+    position: absolute;
+    z-index: 5;
+
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    background-color: white;
+
+    mix-blend-mode: difference;
+}
+/*----------------CURSOR--------------------*/
 
 /*----------------HEADER--------------------*/
 img {
@@ -48,7 +91,6 @@ img {
 .selection div a {
     opacity: 0;
     animation: fade 0.01s ease-out 1.1s forwards;
-    cursor: pointer;
     color: white;
 
     text-decoration: none;
@@ -68,7 +110,7 @@ img {
     transition: all .25s cubic-bezier(1,.25,0,.75) 0s;
 }
 
-.selection div a:hover::before {
+.selection div:hover a::before {
     visibility: visible;
     transform: scaleX(1);
 }
@@ -117,21 +159,19 @@ img {
 .textslide {
     position: relative;
     overflow: hidden;
+    opacity: 0.5;
 
     float: left;
     width: 74%;
-    margin-top: 2.5%;
-    height: 90vh;
+    height: 100vh;
     border-left: 0.5px solid white;
-    font-size: 26vh;
-
-    color:rgb(255,250,250);
+    font-size: 38vh;
 
     animation: viewport 2s ease-out;
 }
 
 .textslide div {
-    margin-top: 5%;
+    margin-top: 1.5%;
     width: 100%;
 }
 
@@ -141,11 +181,11 @@ img {
 }
 
 .textslide div:nth-child(1) {
-    animation: rightoleft 8.5s linear infinite;
+    animation: rightoleft 8.8s linear infinite;
 }
 
 .textslide div:nth-child(2) {
-    animation: leftoright 8.5s linear infinite;
+    animation: leftoright 10s linear infinite;
 }
 
 @keyframes rightoleft {
@@ -154,13 +194,13 @@ img {
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-225%);
     }
 }
 
 @keyframes leftoright {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-150%);
     }
 
     100% {
@@ -174,7 +214,7 @@ img {
     }
 
     100% {
-        height: 90vh;
+        height: 100vh;
     }
 }
 /*----------------TEXT-SLIDE-----------------------*/
@@ -187,6 +227,7 @@ img {
     width: 100%;
     bottom: 0;
     z-index: 101;
+
     background-color: white;
 
     transition: 0.5s ease-out;
@@ -383,14 +424,6 @@ img {
 /*------------------TEXT---------------------------*/
 
 /*------------------SLIDER---------------------------*/
-.projects {
-    cursor: grab;
-}
-
-.projects:active {
-    cursor: grabbing;
-}
-
 .projects .slider {
     margin-top: 18%;
 
@@ -408,8 +441,6 @@ img {
 
 .projects a {
     text-decoration: none;
-
-    cursor: pointer;
     width: fit-content;
 }
 
