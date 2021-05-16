@@ -21,9 +21,6 @@ $(document).ready(function() {
     let mouseCursor = $(".fastCursor");
   
     $("body").mousemove(function(event) {
-      console.log(event.pageX);
-      console.log(event.pageY);
-  
       cursorFollow.css({
         left: event.clientX,
         top: event.clientY
@@ -33,6 +30,16 @@ $(document).ready(function() {
         left: event.clientX + 1.5,
         top: event.clientY
       });
+    });
+
+    let blocks = document.getElementsByClassName("inner");
+    let container = document.getElementsByClassName("outer");
+
+    var hs = new HorizontalScroll.default({
+      blocks : blocks,
+      container: container,
+      isAnimated: true,
+      springEffect: 0.3
     });
 
     /*const slider = document.querySelector("#handler");
